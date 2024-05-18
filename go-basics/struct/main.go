@@ -7,8 +7,9 @@ type Person struct {
 	Age  int
 }
 
-func newPerson(name string, age int) Person {
-	return Person{
+// Passing ref will avoid calling function uses reference instead of copy
+func newPerson(name string, age int) *Person {
+	return &Person{
 		Name: name,
 		Age:  age,
 	}
@@ -45,4 +46,19 @@ func main() {
 	fmt.Printf("%+v", myPerson)
 
 	fmt.Printf("%+v", myPersonnew)
+
+	a := 10
+	b := &a
+
+	//De ref
+	*b = 9
+
+	fmt.Println(a, *b)
+
+	mySlice := []int{1, 2, 3}
+
+	for _, value := range mySlice {
+		fmt.Println(value)
+	}
+
 }
