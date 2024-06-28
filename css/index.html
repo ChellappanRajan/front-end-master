@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn CSS</title>
+	<style>
+	.container{
+		padding:1rem;
+
+	}
+	.box{
+	width:100px;
+	height:100px;
+	border:1px solid red;
+	}
+	.max-content{
+    width:max-content;
+		/* it will not wrap result overflow */
+}
+
+	.fit-content{
+	width:fit-content;
+		/* it will wrap  */
+}
+	button{
+	 width:fit-content(20em);
+	 padding:10px 20px;
+	}
+	.min-content{width:min-content;}
+	</style>
+</head>
+<body>
+   
+	<div class="container">
+		<div class="box">
+			<!-- Min Content smallest bit of the content -->
+			<p class="min-content">Hello Content</p>
+
+
+			<p class="fit-content">Hello I am fit Content</p>
+			
+			<!-- Largest content --> 
+			<p class="max-content">Hello I am Max Content</p>
+		</div>	
+		
+		<button class="btn-purachase">Click Here to confirm purchase</button>
+		<button class="btn-submit">Submit</button>
+	</div>
+
+
+</body>
+</html>
